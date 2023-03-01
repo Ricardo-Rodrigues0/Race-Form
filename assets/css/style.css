@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Reboto", sans-serif;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+.main_race {
+  width: 100vw;
+  height: 100vh;
+  background: #201b2c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left_race {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.left_race > h1 {
+  font-size: 3vw;
+  color: #77ffc0;
+}
+
+.left_race_image {
+  width: 30vw;
+}
+
+.right_race {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_race {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 35px;
+  background: #2f2841;
+  border-radius: 20px;
+  box-shadow: 0px 10px 40px #00000056;
+}
+
+.card_race > h1 {
+  color: #00ff88;
+  font-weight: 800;
+  margin: 10px;
+}
+
+.text_field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 10px 0px;
+}
+
+.text_field > input {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  background: #514859;
+  color: #f0ffffde;
+  font-size: 12pt;
+  box-shadow: 0px 10px 40px #00000056;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.text_field > label {
+  color: #f0ffffde;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.text_field > input::placeholder {
+  color: #f0ffff94;
+}
+
+.btn_submit {
+  width: 100%;
+  padding: 16px 0px;
+  margin: 25px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-align: center;
+  color: #2b134b;
+  background: #00ff88;
+  cursor: pointer;
+  box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+.btn_submit:hover {
+  width: 100%;
+  padding: 16px 0px;
+  margin: 25px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #1b0538;
+  background: #00ff88ba;
+  cursor: pointer;
+  box-shadow: 0px 10px 40px -12px #00ff80b1;
+}
+
+@media only screen and (max-width: 950px) {
+  .card_race {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main_race {
+    flex-direction: column;
+  }
+
+  .left_race > h1 {
+    display: none;
+  }
+
+  .left_race {
+    width: 100%;
+    height: auto;
+  }
+
+  .right_race {
+    width: 100%;
+    height: auto;
+  }
+
+  .left_race-image {
+    width: 30vh;
+  }
+
+  .card_race {
+    width: 90%;
+  }
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkbox2 {
+  display: inline-block;
+  position: relative;
+  padding-left: 28px;
+  margin-right: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox2:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+
+.checkbox2:hover:before {
+  background-color: #ccc;
+}
+
+.checkbox:checked + .checkbox2:before {
+  content: "\2713";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  background-color: #2196F3;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 4px;
+}

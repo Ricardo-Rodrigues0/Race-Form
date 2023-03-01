@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+body {
+    margin: 0;
+    font-family: "Reboto", sans-serif;
+  }
+  
+  body * {
+    box-sizing: border-box;
+  }
+
+.main {
+    background: #727272;
+}
+
+.card {
+    width: 100%;
+    left: 70%;
+    margin: 15px 0px 100px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 35px;
+    background: #2f2841;
+    border-radius: 5px;
+    box-shadow: 0px 10px 40px #7300ff56;
+    border-color: #7300ff;
+  }
+
+.card:hover {
+    background: #ffffffe1;
+    box-shadow: 0px 10px 40px 2px #7300ff;
+    border-color: rgb(0, 0, 0);
+    transition: all ease-in .5s;
+  }
+
+.card-title {
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.participants_name {
+    font-size: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.text_card {
+  margin: 15px 0px 100px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text_card > h1 {
+  font-size: 3vw;
+  color: #050505;
+}
+
+.card-footer {
+    margin: 15px 0px -27px 0px;
+    width: 115%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

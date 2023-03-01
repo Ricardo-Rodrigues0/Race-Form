@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Corrida | Inscrição</title>
+
+    <!-- Carrega o arquivo de estilo que define a aparência da página. -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Carrega o favicon da página exibido na guia do navegador. -->
+    <link rel="icon" type="image/x-icon" href="./assets/image/favicon.png">
+
+</head>
+
+<body>
+    <!-- Formulário onde e cadastrado o participante e sera enviado para o banco de dados. -->
+    <form action="./database/newParticipants.php" method="post">
+        <div class="main_race">
+            <div class="left_race">
+                <h1>Faça sua inscrição<br>E venha para essa maratona!</h1>
+                <img src="./assets/image/race.svg" class="left_race_image" alt="race">
+            </div>
+            <div class="right_race">
+                <div id="card_race" class="card_race">
+                    <h1>Preencha seu cadastro</h1><br>
+                    <div class="text_field">
+                        <label for="participantsName">Nome Completo</label>
+                        <input type="text" name="participantsName" placeholder="Nome Completo" require>
+                    </div>
+                    <div class="text_field">
+                        <label for="participantsCpf">CPF</label>
+                        <input type="text" id="maskCpf" name="participantsCpf" placeholder="CPF" require>
+                    </div>
+                    <div class="text_field">
+                        <label for="participantsAge">Idade</label>
+                        <input type="number" name="participantsAge" placeholder="Idade" require>
+                    </div>
+                    <div class="text_field">
+                        <label for="participantsBirth">Data nascimento</label>
+                        <input type="date" name="participantsBirth" placeholder="Data Nascimento" require>
+                    </div>
+                    <div class="text_field">
+                        <label for="participantsTel">Telefone</label>
+                        <input type="tel" id="maskTel" name="participantsTel" placeholder="(00) 00000-0000" require>
+                    </div>
+
+                    <div class="text_field">
+                        <label class="text_field">Gênero</label>
+                    </div>
+                    <div>
+                        <input id="masculino" class="checkbox" name="participantsGenre" type="checkbox" value="Masculino" onclick="marcaDesmarca(this)" require>
+                        <label for="masculino" class="checkbox2">Masculino</label>
+                        <input id="feminino" class="checkbox" name="participantsGenre" type="checkbox" value="Feminino" onclick="marcaDesmarca(this)" require>
+                        <label for="feminino" class="checkbox2">Feminino</label>
+                        <input id="outro" class="checkbox" name="participantsGenre" type="checkbox" value="Outro" onclick="marcaDesmarca(this)" require>
+                        <label for="outro" class="checkbox2">Outro</label>
+                      </div>
+                      
+                    <button class="btn_submit">Fazer inscrição</button>
+                    <a href="listParticipants.php" class="btn_submit">Participantes</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+<!-- Importando a biblioteca JQuery | Essa biblioteca fornece funcionalidades úteis para manipulação do DOM, eventos, animações, requisições AJAX, entre outras. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Importando a biblioteca jquery.inputmask para adicionar máscaras aos inputs, como CPF e telefone. -->
+<script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+
+<script>
+    // A função abaixo usa a biblioteca Input Mask para adicionar máscaras aos inputs de CPF e telefone.
+    $(function () {
+        $("#maskCpf").inputmask({
+            mask: "999.999.999-99"
+        });
+        $("#maskTel").inputmask({
+            mask: "(##) #####-####"
+        });
+    });
+
+    // A função abaixo permite que apenas um checkbox seja marcado por vez.
+    function marcaDesmarca(caller) {
+        var checks = document.querySelectorAll('input[type="checkbox"]');
+        checks.forEach(c => c.checked = (c == caller));
+    }
+</script>
+
+</html>
