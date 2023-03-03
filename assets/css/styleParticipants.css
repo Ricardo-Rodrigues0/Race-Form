@@ -1,38 +1,47 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
 body {
-    margin: 0;
+    min-height: auto;
     font-family: "Reboto", sans-serif;
     box-sizing: border-box;
   }
 
 .main {
-    background: #727272;
-}
+    background: #e4e9f7;
+    min-height: 100vh;
+    top: 0;
+    left: 78px;
+    transition: all .5s ease;
+    z-index: 2;
+    background-image: url("../image/backgournd.jpg");
+    background-repeat: no-repeat; /* Evita a repetição vertical da imagem */
+    background-size: cover; /* Faz com que a imagem cubra todo o espaço disponível sem distorção */
+    background-position: center; /* Centraliza a imagem horizontalmente e verticalmente */
+  }
 
 .card {
     width: 100%;
     left: 70%;
     margin: 15px 0px 100px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 30px 35px;
     background: #2f2841;
+    display: flex;
+    justify-items: center;
+    align-items: center;
     border-radius: 5px;
-    box-shadow: 0px 10px 40px #7300ff56;
+    box-shadow: 0px 5px 5px #7300ff;
     border-color: #7300ff;
   }
 
 .card:hover {
     background: #ffffffe1;
-    box-shadow: 0px 10px 40px 2px #7300ff;
+    box-shadow: 0px 10px 15px 2px #7300ff45;
     border-color: rgb(0, 0, 0);
     transition: all ease-in .5s;
   }
 
 .card-title {
-    font-size: 22px;
+    font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,4 +110,22 @@ body {
     text-align: center;
     margin-top: 10px;
     font-size: 20px;
+  }
+
+
+  @media only screen and (max-width: 600px) {
+    .card {
+      width: 90%;
+      left: 5%;
+      margin: 15px 0px 50px 0px;
+      padding: 2px 5px;
+    }
+
+    .card-footer {
+      margin: 15px 0px 0px 0px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    
   }

@@ -46,7 +46,7 @@
               <div class="sidebar-module">
                 <div class="main_card">
                   <div class="card">
-                    <h1 class="participants_name"> <?php echo $aux["participantsName"], ' #', $aux["id"]; ?> </h1><br />
+                    <h1 class="participants_name"><strong> <?php echo $aux["participantsName"], ' #', $aux["id"]; ?> </strong> </h1><br />
                     <?php
                     $imagem = '';
                     if ($aux["participantsGenre"] == 'Masculino') $imagem = './assets/image/homem.png';
