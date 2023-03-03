@@ -51,16 +51,18 @@
                         <label class="text_field">Gênero</label>
                     </div>
                     <div>
-                        <input id="masculino" class="checkbox" name="participantsGenre" type="checkbox" value="Masculino" onclick="marcaDesmarca(this)" require>
+                        <input id="masculino" class="checkbox" name="participantsGenre" type="checkbox"
+                            value="Masculino" onclick="marcaDesmarca(this)" require>
                         <label for="masculino" class="checkbox2">Masculino</label>
-                        <input id="feminino" class="checkbox" name="participantsGenre" type="checkbox" value="Feminino" onclick="marcaDesmarca(this)" require>
+                        <input id="feminino" class="checkbox" name="participantsGenre" type="checkbox" value="Feminino"
+                            onclick="marcaDesmarca(this)" require>
                         <label for="feminino" class="checkbox2">Feminino</label>
-                        <input id="outro" class="checkbox" name="participantsGenre" type="checkbox" value="Outro" onclick="marcaDesmarca(this)" require>
+                        <input id="outro" class="checkbox" name="participantsGenre" type="checkbox" value="Outro"
+                            onclick="marcaDesmarca(this)" require>
                         <label for="outro" class="checkbox2">Outro</label>
-                      </div>
-                      
-                    <button class="btn_submit">Fazer inscrição</button>
-                    <a href="listParticipants.php" class="btn_submit">Participantes</a>
+                    </div>
+
+                    <button type="button" class="btn_submit" id="submit-button">Fazer inscrição</button>
                 </div>
             </div>
         </div>
@@ -72,6 +74,9 @@
 
 <!-- Importando a biblioteca jquery.inputmask para adicionar máscaras aos inputs, como CPF e telefone. -->
 <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+
+<!-- Importando um arquivo JS para dentro do projeto | Ele pode conter funções personalizadas, manipulação de eventos e outras funcionalidades específicas do projeto. -->
+<script src="./assets/js/main.js"></script>
 
 <script>
     // A função abaixo usa a biblioteca Input Mask para adicionar máscaras aos inputs de CPF e telefone.

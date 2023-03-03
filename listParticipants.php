@@ -21,6 +21,12 @@
 
 </head>
 
+<style>
+
+</style>
+<div class="loader"></div>
+<div class="load"></div>
+
 <body>
   <div class="main">
     <div class="text_card">
@@ -76,5 +82,6 @@
     </div>
   </div>
 </body>
-
+<!-- Importando um arquivo JS para dentro do projeto | Ele pode conter funções personalizadas, manipulação de eventos e outras funcionalidades específicas do projeto. -->
+<script src="./assets/js/main.js"></script>
 </html>

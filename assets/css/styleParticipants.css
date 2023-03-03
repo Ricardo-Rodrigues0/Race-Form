@@ -3,9 +3,6 @@
 body {
     margin: 0;
     font-family: "Reboto", sans-serif;
-  }
-  
-  body * {
     box-sizing: border-box;
   }
 
@@ -69,3 +66,39 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+
+  /* Estilos para o loader */
+  .loader {
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #04ff19;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite;
+    margin: auto;
+    margin-top: 35vh;
+  }
+
+  /* Animação */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .main {
+    display: none;
+    /* Esconde o conteúdo da página */
+  }
+
+  /* Estilos para o texto de loading */
+  .load {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+  }
