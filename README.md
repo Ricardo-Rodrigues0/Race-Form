@@ -1,4 +1,4 @@
-<h1 align="center">Projeto de Inscrição para Corrida</h1>
+<h1 align="center">Projeto de Inscrição para uma Corrida</h1>
 <p align="center">Este projeto foi desenvolvido para permitir que os participantes possam se inscrever para participar de uma corrida e visualizar uma lista de todos os participantes registrados.</p>
 <ul>
   <li><h3>Funcionalidades</h3></li>
