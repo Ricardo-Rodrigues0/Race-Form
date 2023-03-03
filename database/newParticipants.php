@@ -13,7 +13,7 @@ if (isset($_POST['participantsName'], $_POST['participantsCpf'], $_POST['partici
     $participantsTel = mysqli_real_escape_string($conn, trim($_POST['participantsTel']));
     $participantsGenre = mysqli_real_escape_string($conn, trim($_POST['participantsGenre']));
     
-    $sql = "INSERT INTO $dbParticipanats (participantsName, participantsCpf, participantsAge, participantsBirth, participantsTel, participantsGenre, registrationDate) VALUES ('$participantsName', '$participantsCpf', '$participantsAge', '$participantsBirth', '$participantsTel', '$participantsGenre', NOW())";
+    $sql = "INSERT INTO $dbParticipants (participantsName, participantsCpf, participantsAge, participantsBirth, participantsTel, participantsGenre, registrationDate) VALUES ('$participantsName', '$participantsCpf', '$participantsAge', '$participantsBirth', '$participantsTel', '$participantsGenre', NOW())";
     
     // Executa a query e redireciona para a página principal
     if (mysqli_query($conn, $sql)) {
@@ -25,3 +25,4 @@ if (isset($_POST['participantsName'], $_POST['participantsCpf'], $_POST['partici
         exit();
     }
 }
+?>

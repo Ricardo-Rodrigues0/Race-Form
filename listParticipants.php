@@ -21,13 +21,9 @@
 
 </head>
 
-<style>
-
-</style>
-<div class="loader"></div>
-<div class="load"></div>
-
 <body>
+  <div class="loader"></div>
+  <div class="load"></div>
   <div class="main">
     <div class="text_card">
       <h1>Participantes da corrida</h1>
@@ -84,4 +80,5 @@
 </body>
 <!-- Importando um arquivo JS para dentro do projeto | Ele pode conter funções personalizadas, manipulação de eventos e outras funcionalidades específicas do projeto. -->
 <script src="./assets/js/main.js"></script>
+
 </html>
