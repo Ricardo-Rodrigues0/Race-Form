@@ -3,12 +3,10 @@ setTimeout(function () {
   document.querySelector(".loader").style.display = "none";
   document.querySelector(".load").style.display = "none";
   document.querySelector(".main").style.display = "block";
-}, 5); // 5000
+}, 5 ); // 5000
 
 let loadingText = document.querySelector(".load");
 let loadingMessages = [
-  "Conectando no banco de dados",
-  "Conexão feita com sucesso",
   "Carregando dodos participantes",
   "Finalizando carregamento",
 ];
@@ -21,7 +19,7 @@ let intervalId = setInterval(function () {
     clearInterval(intervalId);
   }
   index++;
-}, 1000);
+}, 2000);
 
 // =================================================================
 

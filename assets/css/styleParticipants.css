@@ -1,58 +1,61 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
 body {
-    min-height: auto;
-    font-family: "Reboto", sans-serif;
-    box-sizing: border-box;
-  }
+  min-height: auto;
+  font-family: "Reboto", sans-serif;
+  box-sizing: border-box;
+}
 
 .main {
-    background: #e4e9f7;
-    min-height: 100vh;
-    top: 0;
-    left: 78px;
-    transition: all .5s ease;
-    z-index: 2;
-    background-image: url("../image/backgournd.jpg");
-    background-repeat: no-repeat; /* Evita a repetição vertical da imagem */
-    background-size: cover; /* Faz com que a imagem cubra todo o espaço disponível sem distorção */
-    background-position: center; /* Centraliza a imagem horizontalmente e verticalmente */
-  }
+  background-color: #e4e9f7; /* adicionando um background-color */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all .5s ease;
+  z-index: 2;
+}
+
 
 .card {
-    width: 100%;
-    left: 70%;
-    margin: 15px 0px 100px 0px;
-    padding: 30px 35px;
-    background: #2f2841;
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    border-radius: 5px;
-    box-shadow: 0px 5px 5px #7300ff;
-    border-color: #7300ff;
-  }
+  width: 100%;
+  left: 70%;
+  margin: 15px 0px 100px 0px;
+  padding: 30px 35px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #7300ff;
+  border-color: #7300ff;
+}
 
 .card:hover {
-    background: #ffffffe1;
-    box-shadow: 0px 10px 15px 2px #7300ff45;
-    border-color: rgb(0, 0, 0);
-    transition: all ease-in .5s;
-  }
+  background: #ebe9e9ea;
+  box-shadow: 2px 2px 2px 2px #7300ff45;
+  border-color: rgb(132, 0, 255);
+  transition: all ease-in .5s;
+}
+
+.btn-warning {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
 
 .card-title {
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .participants_name {
-    font-size: 23px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+  font-size: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .text_card {
@@ -63,69 +66,114 @@ body {
   flex-direction: column;
 }
 
-.text_card > h1 {
+.text_card>h1 {
   font-size: 3vw;
   color: #050505;
 }
 
 .card-footer {
-    margin: 15px 0px -27px 0px;
-    width: 115%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin: 15px 0px -27px 0px;
+  width: 122%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  background-color: #7300ff;
+  height: 100%;
 }
 
 
-  /* Estilos para o loader */
-  .loader {
-    border: 10px solid #f3f3f3;
-    border-top: 10px solid #04ff19;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    animation: spin 2s linear infinite;
-    margin: auto;
-    margin-top: 35vh;
+/* Estilos para o loader */
+.loader {
+  width: 48px;
+  height: 24px;
+  color: #ffffff;
+  background: currentColor;
+  border-radius: 50% 50% 0 0;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  margin: 60px auto 0;
+  box-sizing: border-box;
+  animation: animloader 4s linear infinite;
+}
+
+.loader::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: currentColor;
+  top: -34px;
+  box-sizing: border-box;
+  animation: animloader1 4s linear infinite;
+}
+
+@keyframes animloader {
+  0% {
+    box-shadow: 0 0 0 -2px, 0 0 0 -2px, 0 0 0 -5px, 0 0 0 -5px;
   }
 
-  /* Animação */
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-
-    100% {
-      transform: rotate(360deg);
-    }
+  20% {
+    box-shadow: 40px -1px 0 -2px, 0 0 0 -2px, 40px -1px 0 -5px, 0 0 0 -5px;
   }
 
-  .main {
-    display: none;
-    /* Esconde o conteúdo da página */
+  40% {
+    box-shadow: 40px -1px 0 -2px, -40px -1px 0 -2px, 40px -1px 0 -5px, -40px -1px 0 -5px;
+  }
+}
+
+@keyframes animloader1 {
+  0% {
+    box-shadow: 0 0 0 -2px, 0 0 0 -2px, 0 0 0 -5px, 0 0 0 -5px;
   }
 
-  /* Estilos para o texto de loading */
-  .load {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 20px;
+  20% {
+    box-shadow: 40px 2px 0 -2px, 0 0 0 -2px, 40px 2px 0 -5px, 0 0 0 -5px;
   }
 
-
-  @media only screen and (max-width: 600px) {
-    .card {
-      width: 90%;
-      left: 5%;
-      margin: 15px 0px 50px 0px;
-      padding: 2px 5px;
-    }
-
-    .card-footer {
-      margin: 15px 0px 0px 0px;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-    
+  40% {
+    box-shadow: 40px 2px 0 -2px, -40px 2px 0 -2px, 40px 2px 0 -5px, -40px 2px 0 -5px;
   }
+}
+
+/* Estilos para o texto de loading */
+.load {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+}
+
+.main {
+  display: none;
+  /* Esconde o conteúdo da página */
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 90%;
+    left: 5%;
+    margin: 15px 0px 50px 0px;
+    padding: 2px 5px;
+  }
+
+  .card-footer {
+    margin: 15px 0px 0px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+}
