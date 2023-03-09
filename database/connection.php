@@ -36,7 +36,15 @@ $query_create_table = "CREATE TABLE IF NOT EXISTS $dbParticipants (
     participantsBirth VARCHAR(32) NOT NULL,
     participantsTel VARCHAR(32) NOT NULL,
     participantsGenre VARCHAR(32) NOT NULL,
+    visualization VARCHAR(32) NOT NULL DEFAULT 0,
     registrationDate DATETIME NOT NULL,
     PRIMARY KEY (`id`))";
 
 $result_create_table = $conn->query($query_create_table) or die("ERRO! Não foi possível criar tabela ($dbParticipants)  -> " . mysqli_error($conn));
+
+// Obtém o ID do participante da solicitação POST enviada pelo modal
+$participant_id = $_POST['participant_id'];
+
+// Atualiza o número de visualizações do perfil do participante no banco de dados
+$sql2 = "UPDATE participants SET visualization = visualization + 1 WHERE id = $participant_id";
+$result = mysqli_query($conn, $sql2);

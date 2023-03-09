@@ -48,3 +48,47 @@ function handleSubmitButtonClick() {
     isFormSubmitted = false;
   }, 3000);
 }
+
+// =================================================================
+
+// 
+function updateModal(button) {
+  var modal = document.getElementById('exampleModal');
+  var img = modal.querySelector('.card-img-top');
+  var id = modal.querySelector('#participant-id');
+  var name = modal.querySelector('#participant-name');
+  var cpf = modal.querySelector('#participant-cpf');
+  var age = modal.querySelector('#participant-age');
+  var birth = modal.querySelector('#participant-birth');
+  var tel = modal.querySelector('#participant-tel');
+  var genre = modal.querySelector('#participant-genre');
+
+  img.src = button.dataset.imagem;
+  id.innerText = button.dataset.participantId;
+  name.innerText = button.dataset.participantName;
+  cpf.innerText = button.dataset.participantCpf;
+  age.innerText = button.dataset.participantAge;
+  birth.innerText = button.dataset.participantBirth;
+  tel.innerText = button.dataset.participantTel;
+  genre.innerText = button.dataset.participantGenre;
+
+  // Obtém o ID do participante do botão clicado
+var participant_id = button.dataset.participantId;
+
+// Cria um objeto FormData para enviar os dados POST
+var data = new FormData();
+data.append('participant_id', participant_id);
+
+// Envia a solicitação POST para o servidor
+var xhr = new XMLHttpRequest();
+xhr.open('POST', 'database/connection.php');
+xhr.onload = function() {
+  if (xhr.status === 200) {
+    // Atualização bem-sucedida
+  } else {
+    // Erro ao atualizar
+  }
+};
+xhr.send(data);
+
+}

@@ -37,7 +37,7 @@ body {
   transition: all ease-in .5s;
 }
 
-.btn-warning {
+.btn-primary {
   position: absolute;
   top: 5px;
   right: 5px;
@@ -176,4 +176,10 @@ html {
     justify-content: center;
   }
 
+}
+
+.img-modal {
+  position: absolute;
+  top: 5px;
+  left: 5px;
 }
