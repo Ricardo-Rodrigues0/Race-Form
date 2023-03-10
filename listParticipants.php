@@ -65,7 +65,12 @@
                         <path d="M4.54.146A.5.5 0 0 1 4.893 0h6.214a.5.5 0 0 1 .353.146l4.394 4.394a.5.5 0 0 1 .146.353v6.214a.5.5 0 0 1-.146.353l-4.394 4.394a.5.5 0 0 1-.353.146H4.893a.5.5 0 0 1-.353-.146L.146 11.46A.5.5 0 0 1 0 11.107V4.893a.5.5 0 0 1 .146-.353L4.54.146zM5.1 1 1 5.1v5.8L5.1 15h5.8l4.1-4.1V5.1L10.9 1H5.1z" />
                         <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z" />
                       </svg>
+                      <span class="position-absolute top-0 end-2 translate-middle badge rounded-pill bg-danger" id="participant-views" title="Número de visitas nesse perfil">
+                        <?php echo $aux["visualization"]; ?>
+                      </span>
                     </button>
+
+
                     <img src="<?php echo $imagem; ?>" style="width: 10vw; display: flex; align-items: center; justify-content: center;" class="card-img-top" alt="Imagem participante">
                     <div class="card-body">
                       <h5 class="card-title" _msthash="2950259" _msttexthash="307684">• <u>Informações do participante</u></h5><br />
@@ -103,7 +108,6 @@
               <img src="" style="width: 100%; float: left;" class="card-img-top" alt="Imagem participante" id="participant-image">
             </div>
             <div class="col-6">
-              <div class="modal-body2">
                 <p><strong>ID:</strong> <span id="participant-id"></span></p>
                 <p><strong>Nome:</strong> <span id="participant-name"></span></p>
                 <p><strong>CPF:</strong> <span id="participant-cpf"></span></p>
@@ -111,7 +115,6 @@
                 <p><strong>Data de nascimento:</strong> <span id="participant-birth"></span></p>
                 <p><strong>Telefone:</strong> <span id="participant-tel"></span></p>
                 <p><strong>Gênero:</strong> <span id="participant-genre"></span></p>
-              </div>
             </div>
           </div>
         </div>

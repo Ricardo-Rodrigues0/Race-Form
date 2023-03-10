@@ -53,6 +53,7 @@ function handleSubmitButtonClick() {
 
 // 
 function updateModal(button) {
+  var participant_id = '';
   var modal = document.getElementById('exampleModal');
   var img = modal.querySelector('.card-img-top');
   var id = modal.querySelector('#participant-id');
