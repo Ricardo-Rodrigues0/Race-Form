@@ -3,7 +3,7 @@ setTimeout(function () {
   document.querySelector(".loader").style.display = "none";
   document.querySelector(".load").style.display = "none";
   document.querySelector(".main").style.display = "block";
-}, 5 ); // 5000
+}, 5000 ); // 5000
 
 let loadingText = document.querySelector(".load");
 let loadingMessages = [
